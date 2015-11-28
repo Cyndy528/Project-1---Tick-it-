@@ -23,3 +23,6 @@ iron:router
 mrt:flash-messages
 twbs:bootstrap
 kadira:blaze-layout
+accounts-password
+accounts-ui
+accounts-base
