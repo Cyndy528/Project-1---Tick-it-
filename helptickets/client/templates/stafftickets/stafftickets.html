@@ -1,5 +1,5 @@
 <template name="stafftickets">
-	<div class="panel panel-primary ticket-table">
+    <div class="panel panel-primary ticket-table">
         <div class="panel-heading">
             <h3 class="panel-title">Manage Tickets</h3>
         </div>
@@ -19,7 +19,7 @@
                 <tr>
                     <td>{{_id}}</td>
                     <td><a href="/ticket/{{_id}}">{{subject}}</a></td>
-                    <td>{{formatDate createdAt}}</td>
+                    <td>{{formatDate createAt}}</td>
                     <td>{{capFirst status}}</td>
                     <td><a href="#" class="btn btn-danger btn-tiny close-ticket">Close</a>
                     </td>

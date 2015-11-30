@@ -1,5 +1,5 @@
 <template name="navbar">
-	<nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/mytickets">Home</a></li>
+            <li><a href="/">My Tickets</a></li>
             {{#if currentUser}}
             <li><a href="" data-toggle="modal" data-target="#openTicketModal">Open Ticket</a></li>
             {{/if}}
@@ -36,7 +36,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/stafftickets">Tickets</a></li>
+            <li><a href="/staff">Tickets</a></li>
          <li class="dropdown">
                         <a href="/staff/departments" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments<span class="caret"></span></a>
                         <ul class="dropdown-menu">

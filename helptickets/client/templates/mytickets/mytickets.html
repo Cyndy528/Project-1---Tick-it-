@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{_id}}</td>
                     <td><a href="/ticket/{{_id}}">{{subject}}</a></td>
-                    <td>{{formatDate createdAt}}</td>
+                    <td>{{formatDate createAt}}</td>
                     <td>{{capFirst status}}</td>
                     <td><a href="#" class="btn btn-danger btn-tiny close-ticket">Close</a>
                     </td>
@@ -63,7 +63,7 @@
             <div class="form-group">
                 <label>Department</label>
                 <select id="department" name="department" class="form-control">    
-                {{#each departments}}             
+                <!-- {{#each departments}}  -->            
                     <option value="Engineering & Design">Engineering & Design</option> 
                     <option value="Operations & Support">Operations & Support</option> 
                     <option value="Product Management">Product Management</option> 
@@ -75,7 +75,7 @@
                     
                     <!-- <option value="{{name}}">{{name}}</option>
  -->
-                    {{/each}}
+                    <!-- {{/each}} -->
                 </select>
             </div>
             <div class="form-group">

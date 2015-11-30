@@ -2,6 +2,30 @@ Router.configure({
 	layoutTemplate: 'layout'
 });
 
+// Router.route('/', {
+// 	//Login 
+// 	this.render('mytickets');
+// 	// Data context from a collection
+// 	this.route('mytickets', {
+//   	data: function() {
+//     templateData = { tickets: Tickets.find({}) 
+// 	};
+//     return templateData;
+//   }, 
+
+// }); 
+
+// 	this.route('tickets', {
+// 		path: '/ticket/:_id', 
+// 		template: 'ticket', 
+// 		data: function(){
+// 			var currentTicket = this.params._id;
+// 			return Tickets.findOne({_id: currentTicket})
+// 		}
+// 	});
+// });
+
+
 var OnBeforeActions = {
 	isStaff: function(){
 		// If logged in
@@ -16,11 +40,11 @@ var OnBeforeActions = {
 			this.next();
 		}
 	}
-}
+};
 
 Router.onBeforeAction(OnBeforeActions.isStaff, {
 	only: ['mytickets']
-})
+});
 
 Router.map(function(){
 	this.route('mytickets', {
@@ -40,7 +64,7 @@ Router.map(function(){
 		template: 'ticket',
 		data: function(){
 			var currentTicket = this.params._id;
-			return Tickets.findOne({_id: currentTicket})
+			return Tickets.findOne({_id: currentTicket});
 		}
 	});
 
