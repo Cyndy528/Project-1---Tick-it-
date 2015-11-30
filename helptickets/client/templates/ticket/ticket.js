@@ -7,6 +7,7 @@ Template.ticket.events({
 		} else {
 			usertype = 'customer';
 		}
+		// Need to make two options: customer or staff
 
 		Tickets.update({
 			_id: this._id

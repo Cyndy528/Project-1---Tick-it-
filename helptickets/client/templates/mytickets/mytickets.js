@@ -10,7 +10,7 @@ Template.mytickets.events({
 
 		 // Insert Tickets
 		Tickets.insert ({
-			nam: name, 
+			name: name, 
 			email: email, 
 			subject: subject, 
 			department: department, 
