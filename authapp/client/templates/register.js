@@ -77,7 +77,7 @@ areValidPasswords = function(password, confirm) {
         return false;
     }
     if (password !== confirm) {
-        FlashMessages.sendError("Password s do not match");
+        FlashMessages.sendError("Passwords do not match");
         return false;
     }
     return true;
