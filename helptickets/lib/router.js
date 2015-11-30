@@ -14,12 +14,14 @@ Router.route('/', function(){
   }, 
 
 }); 
-	Router.onBeforeAction(function() {
-  if (! Meteor.userId()) {
-    this.render('mytickets');
-  } else {
-    this.next();
-  }
-});
+
+	this.route('tickets', {
+		path: '/ticket/:_id', 
+		template: 'ticket', 
+		data: function(){
+			var currentTicket = this.params._id;
+			return Tickets.findOne({_id: currentTicket})
+		}
+	});
 });
 
