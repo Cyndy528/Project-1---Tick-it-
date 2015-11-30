@@ -2,14 +2,24 @@ Router.configure({
 	layoutTemplate: 'layout'
 });
 
-// Router.map(function(){
-// 	this.route({
-// 		path: '/'
-// 		template: 'mytickets'
-// 	});
-// }); 
-
 Router.route('/', function(){
 	//Login 
-	this.render('mytickets'); 
+	this.render('mytickets');
+	// Data context from a collection
+	this.route('mytickets', {
+  	data: function() {
+    templateData = { tickets: Tickets.find({}) 
+	};
+    return templateData;
+  }, 
+
 }); 
+	Router.onBeforeAction(function() {
+  if (! Meteor.userId()) {
+    this.render('mytickets');
+  } else {
+    this.next();
+  }
+});
+});
+
